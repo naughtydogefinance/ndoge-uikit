@@ -15,7 +15,7 @@ import { PanelProps, PushedProps } from "./types";
 
 interface Props extends PanelProps, PushedProps {}
 
-const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
+const Icons = IconModule as unknown as { [key: string]: React.FC<SvgProps> };
 const { MoonIcon, SunIcon, LanguageIcon } = Icons;
 
 const Container = styled.div`
@@ -78,6 +78,11 @@ const PanelFooter: React.FC<Props> = ({
   return (
     <Container>
       <SocialEntry>
+        <a href="https://rugdoc.io/project/one-piece-defi/" style={{ padding: "15px" }}>
+          <img src="/images/egg/rugdoc.svg" />
+        </a>
+      </SocialEntry>
+      <SocialEntry>
         {cakePriceUsd ? (
           <PriceLink href={priceLink} target="_blank">
             <PancakeRoundIcon width="24px" mr="8px" />
@@ -121,26 +126,6 @@ const PanelFooter: React.FC<Props> = ({
             <MoonIcon color={isDark ? "text" : "textDisabled"} width="24px" />
           </Flex>
         </Button>
-        <Dropdown
-          position="top-right"
-          target={
-            <Button variant="text" startIcon={<LanguageIcon color="textSubtle" width="24px" />}>
-              <Text color="textSubtle">{currentLang?.toUpperCase()}</Text>
-            </Button>
-          }
-        >
-          {langs.map((lang) => (
-            <MenuButton
-              key={lang.code}
-              fullWidth
-              onClick={() => setLang(lang)}
-              // Safari fix
-              style={{ minHeight: "32px", height: "auto" }}
-            >
-              {lang.language}
-            </MenuButton>
-          ))}
-        </Dropdown>
       </SettingsEntry>
     </Container>
   );
