@@ -78,11 +78,6 @@ const PanelFooter: React.FC<Props> = ({
   return (
     <Container>
       <SocialEntry>
-        <a href="https://rugdoc.io/project/one-piece-defi/" style={{ padding: "15px" }}>
-          <img src="/images/egg/rugdoc.svg" />
-        </a>
-      </SocialEntry>
-      <SocialEntry>
         {cakePriceUsd ? (
           <PriceLink href={priceLink} target="_blank">
             <PancakeRoundIcon width="24px" mr="8px" />

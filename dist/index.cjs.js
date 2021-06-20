@@ -2196,9 +2196,6 @@ var PanelFooter = function (_a) {
     }
     return (React__default['default'].createElement(Container, null,
         React__default['default'].createElement(SocialEntry, null,
-            React__default['default'].createElement("a", { href: "https://rugdoc.io/project/one-piece-defi/", style: { padding: "15px" } },
-                React__default['default'].createElement("img", { src: "/images/egg/rugdoc.svg" }))),
-        React__default['default'].createElement(SocialEntry, null,
             cakePriceUsd ? (React__default['default'].createElement(PriceLink, { href: priceLink, target: "_blank" },
                 React__default['default'].createElement(Icon$B, { width: "24px", mr: "8px" }),
                 React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 })),
