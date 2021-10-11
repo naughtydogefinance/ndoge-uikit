@@ -64,7 +64,7 @@ export const socials = [
     items: [
       {
         label: "English",
-        href: "https://t.me/NdogeOfficial",
+        href: "https://t.me/NdogeOfficialChannel",
       },
     ],
   },
